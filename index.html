@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OryntYT Experience</title>
+    <title>OryntYT Experience | Command Block Expert</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
@@ -11,18 +11,20 @@
             font-family: 'Courier New', Courier, monospace;
             background-color: #000;
             color: #fff;
+            line-height: 1.6;
             scroll-behavior: smooth;
         }
 
+        /* Nav Bar */
         header {
-            padding: 1.5rem 5%;
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 3px solid #ff0000;
             position: sticky;
             top: 0;
-            background: rgba(0,0,0,0.95);
+            background: rgba(0,0,0,0.9);
             z-index: 1000;
         }
 
@@ -35,129 +37,64 @@
             margin-left: 20px;
             font-size: 0.8rem;
             text-transform: uppercase;
-        }
-
-        /* Hero / About Section */
-        section { padding: 80px 10%; }
-        h2 { font-size: 2.5rem; color: #ff0000; text-transform: uppercase; margin-bottom: 20px; }
-
-        .bio-box {
-            border: 1px solid #333;
-            padding: 30px;
-            background: #0a0a0a;
-            position: relative;
-        }
-
-        .bio-box::before {
-            content: "SYSTEM_BIO";
-            position: absolute;
-            top: -12px;
-            left: 20px;
-            background: #ff0000;
-            padding: 0 10px;
-            font-size: 0.7rem;
             font-weight: bold;
         }
 
-        /* Video Area */
-        .video-wrapper {
-            margin-top: 40px;
-            border: 4px solid #fff;
-            box-shadow: 12px 12px 0px #ff0000;
+        nav a:hover { color: #ff0000; }
+
+        /* Main Sections */
+        section { padding: 60px 10%; }
+        h2 { font-size: 2.2rem; color: #ff0000; text-transform: uppercase; margin-bottom: 25px; border-left: 5px solid #fff; padding-left: 15px; }
+
+        /* Bio Box */
+        .bio-box {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            padding: 30px;
             position: relative;
-            padding-bottom: 56.25%;
+        }
+
+        .bio-box p { font-size: 1.2rem; color: #ddd; }
+
+        /* Video Container (Responsive) */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
+            border: 4px solid #fff;
+            box-shadow: 10px 10px 0px #ff0000;
         }
 
-        .video-wrapper iframe {
+        .video-container iframe {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
-        /* Subscribe Button */
-        .sub-btn {
+        /* Buttons */
+        .btn {
             display: inline-block;
             background: #ff0000;
             color: #fff;
             padding: 15px 30px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 30px;
+            margin-top: 20px;
             transition: 0.3s;
-            border: 2px solid #ff0000;
         }
 
-        .sub-btn:hover {
-            background: #000;
-            color: #ff0000;
-        }
+        .btn:hover { background: #fff; color: #000; transform: translateY(-3px); }
 
-        /* Footer & Socials */
+        /* Footer */
         footer {
             text-align: center;
-            padding: 60px 10%;
+            padding: 50px 10%;
             background: #050505;
             border-top: 1px solid #222;
         }
 
-        .social-links {
-            margin-bottom: 20px;
-        }
-
-        .social-links a {
-            color: #fff;
-            font-size: 1.5rem;
-            margin: 0 15px;
-            transition: 0.3s;
-        }
-
-        .social-links a:hover { color: #ff0000; }
-
-        .status-line {
-            color: #444;
-            font-size: 0.7rem;
-            margin-top: 20px;
-            text-transform: uppercase;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo">ORYNTYT<span>_EXP</span></div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section id="about">
-        <div class="bio-box">
-            <p>I’m <strong>OryntYT</strong>, a command block expert and content creator. I design advanced Minecraft systems, tutorials, and creative experiences using command blocks.</p>
-            <a href="http://googleusercontent.com/youtube.com/4" class="sub-btn">
-                <i class="fab fa-youtube"></i> SUBSCRIBE TO CHANNEL
-            </a>
-        </div>
-    </section>
-
-    <section id="work">
-        <h2>Latest Transmission</h2>
-        <div class="video-wrapper">
-            <iframe src="http://googleusercontent.com/youtube.com/5" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <footer>
-        <div class="social-links">
-            <a href="https://www.youtube.com/@OryntYT"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-discord"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p>ORYNTYT EXPERIENCE &copy; 2026</p>
-        <div class="status-line">System Status: <span style="color: #0f0;">ONLINE</span> | Latency: 14ms</div>
-    </footer>
-
-</body>
-</html>
+        .socials a { color: #fff; font-size: 1.8rem; margin: 0 15px; transition: 0.3s; }
+        .socials a:hover { color: #ff0000; }
